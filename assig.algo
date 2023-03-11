@@ -1,0 +1,53 @@
+ALGORITHM distinctElements    //Set 1 :[3, 1, 7, 9],   //  Set 2: [2, 4, 1, 9, 3]
+VAR
+nums1 : ARRAY_OF INTEGER;
+nums2 : ARRAY_OF INTEGER;
+i , j :INTEGERs;
+sum : INTEGER : = 0 ;
+    set_declarations
+write : (" Please enter the num1 array");
+read : read nums 1;
+write : (" Please enter the num2 array");
+read : (read nums 2);
+
+FOR i FROM 0 TO nums1.length -1 STEP 1  DO;
+FOR j FROM 0 TO nums2.length-1 STEP 1  DO;
+IF (nums1(i)!== (nums2(j))) THEN
+sum=sum + i ;
+IF (nums1(j)!== (nums2(i))) THEN
+sum=sum + j;
+
+write: sum;
+    
+END_IF
+    
+END_FOR
+END_FOR
+
+END
+
+
+
+
+ALGORITHM dotProductOperation       // A=[(3i)+(5j)]     B=[(5i)-(2j)]
+VAR
+    vector1 : ARRAY_OF INTEGER;
+    vector2 : ARRAY_OF INTEGER;
+    i, j , result : INTEGER;
+    
+BEGIN
+    write: (" Please enter the first vector");
+    read : (read vector1);
+    write: (" Please enter the second vector");
+    read : (read vector2);
+
+    FOR i FROM 0 TO max vector1-1 STEP 1  DO
+        FOR j FROM 0 TO vector2-1 STEP 1  DO
+        IF (vector1(i)=== vector2(j)) THEN
+            result=vector1(i) * vector2(j);
+        END_IF
+            
+        END_FOR
+    END_FOR
+
+END
